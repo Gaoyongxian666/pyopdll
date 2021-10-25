@@ -18,13 +18,13 @@ theme:
 
 plugins:
 - search
-- mkdocstrings:
-    default_handler: python
-    handlers:
-      python:
-        rendering:
-          show_source: false
-        setup_commands:
-          - import sys
-          - sys.path.insert(0, "..")
+#- mkdocstrings:
+#    default_handler: python
+#    handlers:
+#      python:
+#        rendering:
+#          show_source: false
+#        setup_commands:
+#          - import sys
+#          - sys.path.insert(0, "..")
 
