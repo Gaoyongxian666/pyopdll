@@ -1,0 +1,5370 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>pyopdll</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="assets/_mkdocstrings.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u9996\u9875";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> pyopdll</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">首页</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP">pyopdll.op.OP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.__init__">__init__()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.__repr__">__repr__()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.Un_reg">Un_reg()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.ClientToScreen">ClientToScreen()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.EnumProcess">EnumProcess()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.EnumWindow">EnumWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.EnumWindowByProcess">EnumWindowByProcess()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.EnumWindowSuper">EnumWindowSuper()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindWindow">FindWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindWindowByProcess">FindWindowByProcess()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindWindowByProcessId">FindWindowByProcessId()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindWindowEx">FindWindowEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindWindowSuper">FindWindowSuper()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetClientRect">GetClientRect()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetClientSize">GetClientSize()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetForegroundFocus">GetForegroundFocus()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetForegroundWindow">GetForegroundWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetMousePointWindow">GetMousePointWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetPointWindow">GetPointWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetSpecialWindow">GetSpecialWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetProcessInfo">GetProcessInfo()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindow">GetWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindowClass">GetWindowClass()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindowProcessId">GetWindowProcessId()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindowProcessPath">GetWindowProcessPath()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindowRect">GetWindowRect()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindowState">GetWindowState()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetWindowTitle">GetWindowTitle()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.MoveWindow">MoveWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.ScreenToClient">ScreenToClient()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SendPaste">SendPaste()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SendString">SendString()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SendString2">SendString2()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetClientSize">SetClientSize()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetWindowSize">SetWindowSize()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetWindowState">SetWindowState()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetWindowText">SetWindowText()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetWindowTransparent">SetWindowTransparent()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetBasePath">GetBasePath()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetID">GetID()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetLastError">GetLastError()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetPath">GetPath()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetPath">SetPath()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetShowErrorMsg">SetShowErrorMsg()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.ver">ver()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.EnablePicCache">EnablePicCache()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.BindWindow">BindWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.UnBindWindow">UnBindWindow()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.RunApp">RunApp()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.WinExec">WinExec()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetCmdStr">GetCmdStr()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetCursorPos">GetCursorPos()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetKeyState">GetKeyState()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.KeyDown">KeyDown()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.KeyDownChar">KeyDownChar()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.KeyPress">KeyPress()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.KeyPressChar">KeyPressChar()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.KeyUp">KeyUp()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.KeyUpChar">KeyUpChar()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.LeftClick">LeftClick()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.LeftDoubleClick">LeftDoubleClick()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.LeftDown">LeftDown()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.LeftUp">LeftUp()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.MiddleClick">MiddleClick()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.MoveR">MoveR()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.MoveTo">MoveTo()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.MoveToEx">MoveToEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.RightClick">RightClick()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.RightDown">RightDown()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.RightUp">RightUp()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.WaitKey">WaitKey()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.WheelDown">WheelDown()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.WheelUp">WheelUp()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.Capture">Capture()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.CmpColor">CmpColor()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindColor">FindColor()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindColorEx">FindColorEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindMultiColor">FindMultiColor()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindMultiColorEx">FindMultiColorEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindPic">FindPic()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindPicEx">FindPicEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetColor">GetColor()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.CapturePre">CapturePre()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.EnableDisplayDebug">EnableDisplayDebug()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetScreenData">GetScreenData()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.GetScreenDataBmp">GetScreenDataBmp()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetDisplayInput">SetDisplayInput()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.AStarFindPath">AStarFindPath()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindStr">FindStr()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.FindStrEx">FindStrEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.Ocr">Ocr()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.OcrEx">OcrEx()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.SetDict">SetDict()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.UseDict">UseDict()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.OcrAuto">OcrAuto()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.OcrFromFile">OcrFromFile()</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pyopdll.op.OP.OcrAutoFromFile">OcrAutoFromFile()</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="doc.md">文档</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">pyopdll</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>首页</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="commands">Commands</h2>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
+</ul>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
+
+
+  <div class="doc doc-object doc-class">
+
+<a id="pyopdll.op.OP"></a>
+    <div class="doc doc-contents first">
+
+      <p>pyopdll是开源项目OP(operator &amp; open)的Python接口。</p>
+<p>OP(operator &amp; open)地址：https://github.com/WallBreaker2/op</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dll_path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>初始化并且完成注册</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>dll_path</strong> (<code>str</code>) – op_x64.dll路径。可以指定本地的dll文件，但文件名称必须是op_x64.dll或者op_x86</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.__repr__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>自我描述信息。</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 自我描述信息。</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.Un_reg" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">Un_reg</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>取消已经注册的dll</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>None</code> – 无返回值</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.ClientToScreen" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ClientToScreen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>把窗口坐标转换为屏幕坐标</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄.你可以使用GetWindow，FindWindow等返回窗口句柄的方法获取句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – 返回元组数据类型,（窗口句柄，X坐标，Y坐标）.</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.EnumProcess" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">EnumProcess</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据进程名枚举进程</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>name</strong> (<code>str</code>) – 进程名,比如qq.exe</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回所有匹配的进程PID,并按打开顺序排序,格式"pid1,pid2,pid3"</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.EnumWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">EnumWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">class_name</span><span class="p">,</span> <span class="n">_filter</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据父窗口,枚举系统中符合条件的子窗口,可以枚举到按键自带的无法枚举到的窗口</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>parent</strong> (<code>int</code>) – 获得的窗口句柄是该窗口的子窗口的窗口句柄,取0时为获得桌面句柄</p></li>
+            <li><p><strong>title</strong> (<code>str</code>) – 窗口标题. 此参数是模糊匹配.</p></li>
+            <li><p><strong>class_name</strong> (<code>str</code>) – 窗口类名. 此参数是模糊匹配.</p></li>
+            <li><p><strong>_filter</strong> (<code>int</code>) – 取值定义如下
+        1 : 匹配窗口标题,参数title有效
+        2 : 匹配窗口类名,参数class_name有效.
+        4 : 只匹配指定父窗口的第一层孩子窗口
+        8 : 匹配所有者窗口为0的窗口,即顶级窗口
+        16 : 匹配可见的窗口
+        32 : 匹配出的窗口按照窗口打开顺序依次排列
+        这些值可以相加,比如4+8+16就是类似于任务管理器中的窗口列表</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回str数据类型，"hwnd1,hwnd2,hwnd3"，你可以字符串分割变成列表</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>示例:</p>
+<pre><code>hwnds = dm.EnumWindow(0,"QQ三国","",1+4+8+16)
+这句是获取到所有标题栏中有QQ三国这个字符串的窗口句柄集合
+hwnds = split(hwnds,",")
+转换为数组后,就可以处理了
+这里注意,hwnds数组里的是字符串,要用于使用,比如BindWindow时,还得强制类型转换,比如int(hwnds(0))
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.EnumWindowByProcess" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">EnumWindowByProcess</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">process_name</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">class_name</span><span class="p">,</span> <span class="n">_filter</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据指定进程以及其它条件,枚举系统中符合条件的窗口,可以枚举到按键自带的无法枚举到的窗口</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>process_name</strong> (<code>str</code>) – 进程映像名.比如(svchost.exe). 此参数是精确匹配,但不区分大小写.</p></li>
+            <li><p><strong>title</strong> (<code>str</code>) – 窗口标题. 此参数是模糊匹配.</p></li>
+            <li><p><strong>class_name</strong> (<code>str</code>) – 窗口类名. 此参数是模糊匹配.</p></li>
+            <li><p><strong>_filter</strong> (<code>int</code>) – 取值定义如下  1 : 匹配窗口标题,参数title有效2 : 匹配窗口类名,参数class_name有效4 : 只匹配指定映像的所对应的第一个进程. 可能有很多同映像名的进程，只匹配第一个进程的.8 : 匹配所有者窗口为0的窗口,即顶级窗口16 : 匹配可见的窗口</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回str数据类型，返回所有匹配的窗口句柄字符串,格式"hwnd1,hwnd2,hwnd3"</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.EnumWindowSuper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">EnumWindowSuper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec1</span><span class="p">,</span> <span class="n">flag1</span><span class="p">,</span> <span class="n">type1</span><span class="p">,</span> <span class="n">spec2</span><span class="p">,</span> <span class="n">flag2</span><span class="p">,</span> <span class="n">type2</span><span class="p">,</span> <span class="n">sort</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据两组设定条件来枚举指定窗口.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>spec1</strong> (<code>str</code>) – 查找串1. (内容取决于flag1的值)</p></li>
+            <li><p><strong>flag1</strong> (<code>int</code>) – flag1取值如下:
+            0表示spec1的内容是标题
+            1表示spec1的内容是程序名字. (比如notepad)
+            2表示spec1的内容是类名
+            3表示spec1的内容是程序路径.(不包含盘符,比如\windows\system32)
+            4表示spec1的内容是父句柄.(十进制表达的串)
+            5表示spec1的内容是父窗口标题
+            6表示spec1的内容是父窗口类名
+            7表示spec1的内容是顶级窗口句柄.(十进制表达的串)
+            8表示spec1的内容是顶级窗口标题
+            9表示spec1的内容是顶级窗口类名</p></li>
+            <li><p><strong>type1</strong> (<code>int</code>) – 0精确判断1模糊判断</p></li>
+            <li><p><strong>spec2</strong> (<code>str</code>) – 查找串2. (内容取决于flag2的值)</p></li>
+            <li><p><strong>flag2</strong> (<code>int</code>) – flag2取值如下:
+            0表示spec2的内容是标题
+            1表示spec2的内容是程序名字. (比如notepad)
+            2表示spec2的内容是类名
+            3表示spec2的内容是程序路径.(不包含盘符,比如\windows\system32)
+            4表示spec2的内容是父句柄.(十进制表达的串)
+            5表示spec2的内容是父窗口标题
+            6表示spec2的内容是父窗口类名
+            7表示spec2的内容是顶级窗口句柄.(十进制表达的串)
+            8表示spec2的内容是顶级窗口标题
+            9表示spec2的内容是顶级窗口类名</p></li>
+            <li><p><strong>type2</strong> (<code>int</code>) – 0精确判断,1模糊判断</p></li>
+            <li><p><strong>sort</strong> (<code>int</code>) – 0不排序.1对枚举出的窗口进行排序,按照窗口打开顺序.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回所有匹配的窗口句柄字符串,格式"hwnd1,hwnd2,hwnd3"</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">title_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找符合类名或者标题名的顶层可见窗</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>class_name</strong> (<code>str</code>) – 窗口类名，如果为空，则匹配所有. 这里的匹配是模糊匹配.</p></li>
+            <li><p><strong>title_name</strong> (<code>str</code>) – 窗口标题,如果为空，则匹配所有.这里的匹配是模糊匹配.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 整数型表示的窗口句柄，没找到返回0</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>For example:</p>
+<pre><code>hwnd = dm.FindWindow("","记事本")
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindWindowByProcess" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindWindowByProcess</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">process_name</span><span class="p">,</span> <span class="n">class_</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据指定的进程名字，来查找可见窗口.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>process_name</strong> (<code>str</code>) – 进程名. 比如(notepad.exe).这里是精确匹配,但不区分大小写.</p></li>
+            <li><p><strong>class_</strong> (<code>str</code>) – 窗口类名，如果为空，则匹配所有. 这里的匹配是模糊匹配.</p></li>
+            <li><p><strong>title</strong> (<code>str</code>) – 窗口标题,如果为空，则匹配所有.这里的匹配是模糊匹配.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 表示的窗口句柄，没找到返回0</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindWindowByProcessId" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindWindowByProcessId</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">process_id</span><span class="p">,</span> <span class="n">class_</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据指定的进程Id，来查找可见窗口.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>process_id</strong> (<code>int</code>) – 进程id.</p></li>
+            <li><p><strong>class_</strong> (<code>str</code>) – 窗口类名，如果为空，则匹配所有. 这里的匹配是模糊匹配.</p></li>
+            <li><p><strong>title</strong> (<code>str</code>) – 窗口标题,如果为空，则匹配所有.这里的匹配是模糊匹配.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 表示的窗口句柄，没找到返回0</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindWindowEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindWindowEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">_class</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找符合类名或者标题名的顶层可见窗口,如果指定了parent,则在parent的第一层子窗口中查找.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>parent</strong> (<code>int</code>) – 父窗口句柄，如果为空，则匹配所有顶层窗口</p></li>
+            <li><p><strong>_class</strong> (<code>str</code>) – 窗口类名，如果为空，则匹配所有. 这里的匹配是模糊匹配.</p></li>
+            <li><p><strong>title</strong> (<code>str</code>) – 窗口标题,如果为空，则匹配所有. 这里的匹配是模糊匹配.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 表示的窗口句柄，没找到返回0</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>For example:</p>
+<pre><code>hwnd = dm.FindWindowEx(0,"","记事本")
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindWindowSuper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindWindowSuper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec1</span><span class="p">,</span> <span class="n">flag1</span><span class="p">,</span> <span class="n">type1</span><span class="p">,</span> <span class="n">spec2</span><span class="p">,</span> <span class="n">flag2</span><span class="p">,</span> <span class="n">type2</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据两组设定条件来查找指定窗口.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>spec1</strong> (<code>str</code>) – 查找串1. (内容取决于flag1的值)</p></li>
+            <li><p><strong>flag1</strong> (<code>int</code>) – flag1取值如下:
+            0表示spec1的内容是标题
+            1表示spec1的内容是程序名字. (比如notepad)
+            2表示spec1的内容是类名
+            3表示spec1的内容是程序路径.(不包含盘符,比如\windows\system32)
+            4表示spec1的内容是父句柄.(十进制表达的串)
+            5表示spec1的内容是父窗口标题
+            6表示spec1的内容是父窗口类名
+            7表示spec1的内容是顶级窗口句柄.(十进制表达的串)
+            8表示spec1的内容是顶级窗口标题
+            9表示spec1的内容是顶级窗口类名</p></li>
+            <li><p><strong>type1</strong> (<code>int</code>) – 0精确判断1模糊判断</p></li>
+            <li><p><strong>spec2</strong> (<code>str</code>) – 查找串2. (内容取决于flag2的值)</p></li>
+            <li><p><strong>flag2</strong> (<code>int</code>) – flag2取值如下:
+            0表示spec2的内容是标题
+            1表示spec2的内容是程序名字. (比如notepad)
+            2表示spec2的内容是类名
+            3表示spec2的内容是程序路径.(不包含盘符,比如\windows\system32)
+            4表示spec2的内容是父句柄.(十进制表达的串)
+            5表示spec2的内容是父窗口标题
+            6表示spec2的内容是父窗口类名
+            7表示spec2的内容是顶级窗口句柄.(十进制表达的串)
+            8表示spec2的内容是顶级窗口标题
+            9表示spec2的内容是顶级窗口类名</p></li>
+            <li><p><strong>type2</strong> (<code>int</code>) – 0精确判断,1模糊判断</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 表示的窗口句柄，没找到返回0</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetClientRect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetClientRect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取窗口客户区域在屏幕上的位置</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (窗口句柄,窗口客户区左上角X坐标,窗口客户区左上角Y坐标,窗口客户区右下角X坐标,窗口客户区右下角Y坐标)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetClientSize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetClientSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取窗口客户区域的宽度和高度</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (指定的窗口句柄,宽度,高度)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetForegroundFocus" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetForegroundFocus</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取顶层活动窗口中具有输入焦点的窗口句柄</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回整型表示的窗口句柄</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetForegroundWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetForegroundWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取顶层活动窗口,可以获取到按键自带插件无法获取到的句柄</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回整型表示的窗口句柄</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetMousePointWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetMousePointWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取鼠标指向的窗口句柄,可以获取到按键自带的插件无法获取到的句柄</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回整型表示的窗口句柄</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetPointWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetPointWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取给定坐标的窗口句柄,可以获取到按键自带的插件无法获取到的句柄</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x</strong> (<code>int</code>) – 屏幕X坐标</p></li>
+            <li><p><strong>y</strong> (<code>int</code>) – 屏幕Y坐标</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回整型表示的窗口句柄</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetSpecialWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetSpecialWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flag</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取特殊窗口</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>flag</strong> (<code>int</code>) – 取值定义如下
+    0 : 获取桌面窗口
+    1 : 获取任务栏窗口</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 以整型数表示的窗口句柄</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetProcessInfo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetProcessInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pid</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据指定的pid获取进程详细信息,(进程名,进程全路径,CPU占用率(百分比),内存占用量(字节))</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>pid</strong> (<code>int</code>) – 进程pid</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>字符串</code> – 格式"进程名|进程路径|cpu|内存"</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">flag</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取给定窗口相关的窗口句柄</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 窗口句柄</p></li>
+            <li><p><strong>flag</strong> (<code>int</code>) – 取值定义如下
+    0 : 获取父窗口
+    1 : 获取第一个儿子窗口
+    2 : 获取First 窗口
+    3 : 获取Last窗口
+    4 : 获取下一个窗口
+    5 : 获取上一个窗口
+    6 : 获取拥有者窗口
+    7 : 获取顶层窗口</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回整型表示的窗口句柄</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindowClass" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindowClass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取窗口的类名</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 窗口的类名</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindowProcessId" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindowProcessId</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取指定窗口所在的进程ID.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回整型表示的是进程ID</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindowProcessPath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindowProcessPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取指定窗口所在的进程的exe文件全路径.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回字符串表示的是exe全路径名</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindowRect" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindowRect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取窗口在屏幕上的位置</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (指定的窗口句柄,窗口左上角X坐标,窗口左上角Y坐标 窗口右下角X坐标,窗口右下角Y坐标)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindowState" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindowState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">flag</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取指定窗口的一些属性</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>flag</strong> (<code>int</code>) – 取值定义如下:
+    0 : 判断窗口是否存在
+    1 : 判断窗口是否处于激活
+    2 : 判断窗口是否可见
+    3 : 判断窗口是否最小化
+    4 : 判断窗口是否最大化
+    5 : 判断窗口是否置顶
+    6 : 判断窗口是否无响应
+    7 : 判断窗口是否可用(灰色为不可用)
+    8 : 另外的方式判断窗口是否无响应,如果6无效可以尝试这个</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetWindowTitle" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetWindowTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取窗口的标题</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 窗口的标题</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.MoveWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">MoveWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>移动指定窗口到指定位置</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>x</strong> (<code>int</code>) – X坐标</p></li>
+            <li><p><strong>y</strong> (<code>int</code>) – Y坐标</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.ScreenToClient" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ScreenToClient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>把屏幕坐标转换为窗口坐标</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – 返回元组（指定的窗口句柄，屏幕X坐标，屏幕Y坐标）</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SendPaste" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SendPaste</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>向指定窗口发送粘贴命令. 把剪贴板的内容发送到目标窗口.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SendString" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SendString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>向指定窗口发送文本数据</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>str</strong> (<code>str</code>) – 发送的文本数据</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SendString2" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SendString2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>向指定窗口发送文本数据</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>str</strong> (<code>str</code>) – 发送的文本数据</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>注: 此接口为老的SendString，如果新的SendString不能输入，可以尝试此接口.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetClientSize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetClientSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置窗口客户区域的宽度和高度</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>width</strong> (<code>int</code>) – 宽度</p></li>
+            <li><p><strong>height</strong> (<code>int</code>) – 高度</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetWindowSize" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetWindowSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置窗口的大小</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>width</strong> (<code>int</code>) – 宽度</p></li>
+            <li><p><strong>height</strong> (<code>int</code>) – 高度</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetWindowState" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetWindowState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">flag</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置窗口的状态</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>flag</strong> (<code>int</code>) – 取值定义如下
+    0 : 关闭指定窗口
+    1 : 激活指定窗口
+    2 : 最小化指定窗口,但不激活
+    3 : 最小化指定窗口,并释放内存,但同时也会激活窗口.
+    4 : 最大化指定窗口,同时激活窗口.
+    5 : 恢复指定窗口 ,但不激活
+    6 : 隐藏指定窗口
+    7 : 显示指定窗口
+    8 : 置顶指定窗口
+    9 : 取消置顶指定窗口
+    10 : 禁止指定窗口
+    11 : 取消禁止指定窗口
+    12 : 恢复并激活指定窗口
+    13 : 强制结束窗口所在进程.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetWindowText" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetWindowText</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置窗口的标题</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>title</strong> (<code>str</code>) – 标题</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetWindowTransparent" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetWindowTransparent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">trans</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置窗口的透明度</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>trans</strong> (<code>int</code>) – 透明度取值(0-255) 越小透明度越大 0为完全透明(不可见) 255为完全显示(不透明)</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetBasePath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetBasePath</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取注册在系统中的dll的路径.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回dll所在路径.</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetID" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetID</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>返回当前对象的ID值，这个值对于每个对象是唯一存在的。可以用来判定两个对象是否一致.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 当前对象的ID值.</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetLastError" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetLastError</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取插件命令的最后错误</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回值表示错误值。 0表示无错误.</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>注: 此函数必须紧跟上一句函数调用，中间任何的语句调用都会改变这个值.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetPath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetPath</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取全局路径.(可用于调试)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 以字符串的形式返回当前设置的全局路径</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetPath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置全局路径,设置了此路径后,所有接口调用中,相关的文件都相对于此路径. 比如图片,字库等.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>path</strong> (<code>str</code>) – 路径,可以是相对路径,也可以是绝对路径</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetShowErrorMsg" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetShowErrorMsg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">show</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置是否弹出错误信息,默认是打开.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>show</strong> (<code>int</code>) – 0表示不打开,1表示打开.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.ver" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>返回当前插件版本号</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 当前插件的版本描述字符串</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.EnablePicCache" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">EnablePicCache</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置是否开启或者关闭插件内部的图片缓存机制. (默认是打开).</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>enable</strong> (<code>int</code>) – 0代表关闭，1代表打开</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>注: 有些时候，系统内存比较吃紧，这时候再打开内部缓存，可能会导致缓存分配在虚拟内存，这样频繁换页，反而导致图色效率下降.这时候就建议关闭图色缓存. 所有图色缓存机制都是对本对象的，也就是说，调用图色缓存机制的函数仅仅对本对象生效. 每个对象都有一个图色缓存队列.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.BindWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">BindWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">display</span><span class="p">,</span> <span class="n">mouse</span><span class="p">,</span> <span class="n">keypad</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>绑定指定的窗口,并指定这个窗口的屏幕颜色获取方式,鼠标仿真模式,键盘仿真模式,以及模式设定.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>hwnd</strong> (<code>int</code>) – 指定的窗口句柄</p></li>
+            <li><p><strong>display</strong> (<code>str</code>) – 屏幕颜色获取方式 取值有以下几种:
+"normal" : 正常模式,平常我们用的前台截屏模式
+"gdi" : gdi模式,用于窗口采用GDI方式刷新时. 此模式占用CPU较大. 参考SetAero
+"dx" : dx模式,等同于dx.d3d9
+"dx.d3d9" dx模式，使用d3d9渲染
+"dx.d3d10" dx模式，使用d3d10渲染
+"dx.d3d11" dx模式，使用d3d11渲染
+"opengl" opengl模式，使用opengl渲染的窗口，支持最新版雷电模拟器，以及夜神6.1，支持最小化窗口截图
+"opengl.nox" opengl模式，针对最新夜神模拟器的渲染方式，测试中。。。</p></li>
+            <li><p><strong>mouse</strong> (<code>str</code>) – 鼠标仿真模式 取值有以下几种
+"normal" : 正常模式,平常我们用的前台鼠标模式
+"windows": Windows模式,采取模拟windows消息方式 同按键自带后台插件.</p></li>
+            <li><p><strong>keypad</strong> (<code>str</code>) – 键盘仿真模式 取值有以下几种
+"normal" : 正常模式,平常我们用的前台键盘模式
+"windows": Windows模式,采取模拟windows消息方式 同按键的后台插件</p></li>
+            <li><p><strong>mode</strong> (<code>int</code>) – 模式</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.UnBindWindow" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">UnBindWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>解除绑定窗口,并释放系统资源.一般在OnScriptExit调用</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.RunApp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">RunApp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app_path</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>运行指定的应用程序.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>app_path</strong> (<code>str</code>) – 指定的可执行程序全路径.</p></li>
+            <li><p><strong>mode</strong> (<code>int</code>) – 取值如下0:普通模式  1:加强模式</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.WinExec" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">WinExec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmdline</span><span class="p">,</span> <span class="n">cmdshow</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>运行指定的应用程序.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>cmdline</strong> (<code>str</code>) – 指定的可执行程序全路径.</p></li>
+            <li><p><strong>cmdshow</strong> (<code>int</code>) – 取值如下 0:隐藏 1:用最近的大小和位置显示, 激活</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetCmdStr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetCmdStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmdline</span><span class="p">,</span> <span class="n">millseconds</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>运行指定的应用程序.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>cmdline</strong> (<code>str</code>) – 指定的可执行程序全路径.</p></li>
+            <li><p><strong>millseconds</strong> (<code>int</code>) – 等待的时间(毫秒)</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – cmd输出的字符</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetCursorPos" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetCursorPos</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取鼠标位置.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (x,y)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetKeyState" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetKeyState</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vk_code</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取指定的按键状态.(前台信息,不是后台)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>vk_code</strong> (<code>int</code>) – 虚拟按键码</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.KeyDown" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">KeyDown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vk_code</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按住指定的虚拟键码</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>vk_code</strong> (<code>int</code>) – 虚拟按键码</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.KeyDownChar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">KeyDownChar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_str</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按住指定的虚拟键码</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>key_str</strong> (<code>str</code>) – 符串描述的键码. 大小写无所谓. 点这里查看具体对应关系</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.KeyPress" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">KeyPress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vk_code</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按下指定的虚拟键码</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>vk_code</strong> (<code>int</code>) – 虚拟按键码</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.KeyPressChar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">KeyPressChar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_str</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按下指定的虚拟键码</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>key_str</strong> (<code>str</code>) – 字符串描述的键码. 大小写无所谓. 点这里查看具体对应关系</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.KeyUp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">KeyUp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vk_code</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>弹起来虚拟键vk_code</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>vk_code</strong> (<code>int</code>) – 虚拟按键码</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.KeyUpChar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">KeyUpChar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_str</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>弹起来虚拟键key_str</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>key_str</strong> (<code>str</code>) – 字符串描述的键码. 大小写无所谓. 点这里查看具体对应关系.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.LeftClick" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">LeftClick</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按下鼠标左键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.LeftDoubleClick" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">LeftDoubleClick</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>双击鼠标左键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.LeftDown" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">LeftDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按住鼠标左键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.LeftUp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">LeftUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>弹起鼠标左键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.MiddleClick" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">MiddleClick</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按下鼠标中键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.MoveR" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">MoveR</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rx</span><span class="p">,</span> <span class="n">ry</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>鼠标相对于上次的位置移动rx,ry</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>rx</strong> (<code>int</code>) – 相对于上次的X偏移</p></li>
+            <li><p><strong>ry</strong> (<code>int</code>) – 相对于上次的Y偏移</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.MoveTo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">MoveTo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>把鼠标移动到目的点(x,y)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x</strong> (<code>int</code>) – X坐标</p></li>
+            <li><p><strong>y</strong> (<code>int</code>) – Y坐标</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.MoveToEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">MoveToEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>把鼠标移动到目的范围内的任意一点</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x</strong> (<code>int</code>) – X坐标</p></li>
+            <li><p><strong>y</strong> (<code>int</code>) – Y坐标</p></li>
+            <li><p><strong>w</strong> (<code>int</code>) – 宽度(从x计算起)</p></li>
+            <li><p><strong>h</strong> (<code>int</code>) – 高度(从y计算起)</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回要移动到的目标点. 格式为x,y. 比如MoveToEx 100,100,10,10,返回值可能是101,102</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.RightClick" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">RightClick</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按下鼠标右键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.RightDown" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">RightDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>按住鼠标右键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.RightUp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">RightUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>弹起鼠标右键</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.WaitKey" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">WaitKey</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vk_code</span><span class="p">,</span> <span class="n">time_out</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>等待指定的按键按下 (前台,不是后台)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>vk_code</strong> (<code>int</code>) – 虚拟按键码,当此值为0，表示等待任意按键。 鼠标左键是1,鼠标右键时2,鼠标中键是4</p></li>
+            <li><p><strong>time_out</strong> (<code>int</code>) – 等待多久,单位毫秒. 如果是0，表示一直等待</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>0</code> – 超时 1:指定的按键按下 (当vk_code不为0时) 按下的按键码:(当vk_code为0时)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.WheelDown" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">WheelDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>滚轮向下滚</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.WheelUp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">WheelUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>滚轮向上滚</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.Capture" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">Capture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>抓取指定区域(x1, y1, x2, y2)的图像,保存为file(24位位图)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>file</strong> (<code>str</code>) – 保存的文件名,保存的地方一般为SetPath中设置的目录,当然这里也可以指定全路径名.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败，1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.CmpColor" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">CmpColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>比较指定坐标点(x,y)的颜色</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x</strong> (<code>int</code>) – X坐标</p></li>
+            <li><p><strong>y</strong> (<code>int</code>) – Y坐标</p></li>
+            <li><p><strong>color</strong> (<code>str</code>) – 颜色字符串,可以支持偏色,多色,例如 "ffffff-202020|000000-000000" 这个表示白色偏色为202020,和黑色偏色为000000.颜色最多支持10种颜色组合. 注意，这里只支持RGB颜色.</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度(0.1-1.0)</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>0</code> – 颜色匹配 1: 颜色不匹配</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindColor" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找指定区域内的颜色,颜色格式"RRGGBB-DRDGDB",注意,和按键的颜色格式相反</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>color</strong> (<code>str</code>) – 颜色 格式为"RRGGBB-DRDGDB",比如"123456-000000|aabbcc-202020".注意，这里只支持RGB颜色.</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+            <li><p><strong>dir</strong> (<code>int</code>) – 查找方向 0: 从左到右,从上到下 1: 从左到右,从下到上 2: 从右到左,从上到下 3: 从右到左,从下到上 4：从中心往外查找 5: 从上到下,从左到右 6: 从上到下,从右到左 7: 从下到上,从左到右 8: 从下到上,从右到左</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (x1, y1, x2, y2, color, sim, dir,返回X坐标,返回Y坐标)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindColorEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindColorEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找指定区域内的所有颜色,颜色格式"RRGGBB-DRDGDB",注意,和按键的颜色格式相反</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>color</strong> (<code>str</code>) – 颜色 格式为"RRGGBB-DRDGDB",比如"123456-000000|aabbcc-202020".注意，这里只支持RGB颜色.</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+            <li><p><strong>dir</strong> (<code>int</code>) – 查找方向 0: 从左到右,从上到下 1: 从左到右,从下到上 2: 从右到左,从上到下 3: 从右到左,从下到上 4：从中心往外查找 5: 从上到下,从左到右 6: 从上到下,从右到左 7: 从下到上,从左到右 8: 从下到上,从右到左</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回所有颜色信息的坐标值,然后通过GetResultCount等接口来解析 (由于内存限制,返回的颜色数量最多为1800个左右)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindMultiColor" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindMultiColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">first_color</span><span class="p">,</span> <span class="n">offset_color</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>根据指定的多点查找颜色坐标</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>first_color</strong> (<code>str</code>) – 颜色格式为"RRGGBB-DRDGDB|RRGGBB-DRDGDB|…………",比如"123456-000000"这里的含义和按键自带Color插件的意义相同，只不过我的可以支持偏色和多种颜色组合.所有的偏移色坐标都相对于此颜色.注意，这里只支持RGB颜色.</p></li>
+            <li><p><strong>offset_color</strong> (<code>str</code>) – 偏移颜色可以支持任意多个点 格式和按键自带的Color插件意义相同, 只不过我的可以支持偏色和多种颜色组合,格式为"x1|y1|RRGGBB-DRDGDB|RRGGBB-DRDGDB……,……xn|yn|RRGGBB-DRDGDB|RRGGBB-DRDGDB……"
+             比如"1|3|aabbcc|aaffaa-101010,-5|-3|123456-000000|454545-303030|565656"等任意组合都可以，支持偏色还可以支持反色模式，比如"1|3|-aabbcc|-334455-101010,-5|-3|-123456-000000|-353535|454545-101010","-"表示除了指定颜色之外的颜色.</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+            <li><p><strong>dir</strong> (<code>int</code>) – 查找方向 0: 从左到右,从上到下 1: 从左到右,从下到上 2: 从右到左,从上到下 3: 从右到左, 从下到上</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (x1, y1, x2, y2,first_color,offset_color,sim, dir,返回的X坐标,返回的Y坐标) 坐标是first_color所在的坐标</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindMultiColorEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindMultiColorEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">first_color</span><span class="p">,</span> <span class="n">offset_color</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找指定区域内的所有颜色,颜色格式"RRGGBB-DRDGDB",注意,和按键的颜色格式相反</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>first_color</strong> (<code>str</code>) – 颜色格式为"RRGGBB-DRDGDB|RRGGBB-DRDGDB|…………",比如"123456-000000"这里的含义和按键自带Color插件的意义相同，只不过我的可以支持偏色和多种颜色组合.所有的偏移色坐标都相对于此颜色.注意，这里只支持RGB颜色.</p></li>
+            <li><p><strong>offset_color</strong> (<code>str</code>) – 偏移颜色可以支持任意多个点 格式和按键自带的Color插件意义相同, 只不过我的可以支持偏色和多种颜色组合,格式为"x1|y1|RRGGBB-DRDGDB|RRGGBB-DRDGDB……,……xn|yn|RRGGBB-DRDGDB|RRGGBB-DRDGDB……"
+             比如"1|3|aabbcc|aaffaa-101010,-5|-3|123456-000000|454545-303030|565656"等任意组合都可以，支持偏色还可以支持反色模式，比如"1|3|-aabbcc|-334455-101010,-5|-3|-123456-000000|-353535|454545-101010","-"表示除了指定颜色之外的颜色.</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+            <li><p><strong>dir</strong> (<code>int</code>) – 查找方向 0: 从左到右,从上到下 1: 从左到右,从下到上 2: 从右到左,从上到下 3: 从右到左, 从下到上</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回所有颜色信息的坐标值,然后通过GetResultCount等接口来解析(由于内存限制,返回的坐标数量最多为1800个左右)坐标是first_color所在的坐标</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindPic" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindPic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">pic_name</span><span class="p">,</span> <span class="n">delta_color</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找指定区域内的图片,位图必须是24位色格式,支持透明色,当图像上下左右4个顶点的颜色一样时,则这个颜色将作为透明色处理.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>pic_name</strong> (<code>str</code>) – 图片名,可以是多个图片,比如"test.bmp|test2.bmp|test3.bmp"</p></li>
+            <li><p><strong>delta_color</strong> (<code>str</code>) – 颜色色偏比如"203040" 表示RGB的色偏分别是20 30 40 (这里是16进制表示)</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+            <li><p><strong>dir</strong> (<code>int</code>) – 查找方向 0: 从左到右,从上到下 1: 从左到右,从下到上 2: 从右到左,从上到下 3: 从右到左, 从下到上</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (x1, y1, x2, y2, pic_name, delta_color,sim, dir,图片左上角的X坐标, 图片左上角的Y坐标)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindPicEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindPicEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">pic_name</span><span class="p">,</span> <span class="n">delta_color</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>查找指定区域内的图片,位图必须是24位色格式,支持透明色,当图像上下左右4个顶点的颜色一样时,则这个颜色将作为透明色处理.这个函数可以查找多个图片,并且返回所有找到的图像的坐标.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>pic_name</strong> (<code>str</code>) – 图片名,可以是多个图片,比如"test.bmp|test2.bmp|test3.bmp"</p></li>
+            <li><p><strong>delta_color</strong> (<code>str</code>) – 颜色色偏比如"203040" 表示RGB的色偏分别是20 30 40 (这里是16进制表示)</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+            <li><p><strong>dir</strong> (<code>int</code>) – 查找方向 0: 从左到右,从上到下 1: 从左到右,从下到上 2: 从右到左,从上到下 3: 从右到左, 从下到上</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回的是所有找到的坐标格式如下"id,x,y|id,x,y..|id,x,y" (图片左上角的坐标)比如"0,100,20|2,30,40" 表示找到了两个,第一个,对应的图片是图像序号为0的图片,坐标是(100,20),第二个是序号为2的图片,坐标(30,40) (由于内存限制,返回的图片数量最多为1500个左右)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetColor" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetColor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取(x,y)的颜色,颜色返回格式"RRGGBB",注意,和按键的颜色格式相反</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x</strong> (<code>int</code>) – X坐标</p></li>
+            <li><p><strong>y</strong> (<code>int</code>) – Y坐标</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 颜色字符串(注意这里都是小写字符，和工具相匹配)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.CapturePre" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">CapturePre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>抓取上次操作的图色区域，保存为file(32位位图)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>file</strong> (<code>str</code>) – 保存的文件名,保存的地方一般为SetPath中设置的目录,当然这里也可以指定全路径名.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败 1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>注意，要开启此函数，必须先调用EnableDisplayDebug 任何图色或者文字识别函数，都可以通过这个来截取.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.EnableDisplayDebug" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">EnableDisplayDebug</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_debug</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>开启图色调试模式，此模式会稍许降低图色和文字识别的速度.默认不开启.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>enable_debug</strong> (<code>int</code>) – 0为关闭  1为开启</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败 1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetScreenData" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetScreenData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取指定区域的图像,用二进制数据的方式返回,（不适合按键使用）方便二次开发.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 返回的是指定区域的二进制颜色数据地址,每个颜色是4个字节,表示方式为(BBGGRR00)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>注意,调用完此接口后，返回的数据指针在当前op对象销毁时，或者再次调用GetScreenData时，会自动释放.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.GetScreenDataBmp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">GetScreenDataBmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>获取指定区域的图像,用24位位图的数据格式返回,方便二次开发.（或者可以配合SetDisplayInput的mem模式）</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (x1,y1,x2,y2,返回图片的数据,返回图片的数据长度)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetDisplayInput" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetDisplayInput</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设定图色的获取方式，默认是显示器或者后台窗口(具体参考BindWindow)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>mode</strong> (<code>str</code>) – 图色输入模式取值有以下几种
+    "screen" 这个是默认的模式，表示使用显示器或者后台窗口
+    "pic:file" 指定输入模式为指定的图片,如果使用了这个模式，则所有和图色相关的函数均视为对此图片进行处理，比如文字识别查找图片 颜色 等等一切图色函数.需要注意的是，设定以后，此图片就已经加入了缓冲，如果更改了源图片内容，那么需要 释放此缓冲，重新设置.
+    "mem:addr" 指定输入模式为指定的图片,此图片在内存当中. addr为图像内存地址,一般是GetScreenDataBmp的返回值（前54字节为位图信息，后面的是像素数据），注意与大漠的区别.如果使用了这个模式，则所有和图色相关的函数,均视为对此图片进行处理.比如文字识别 查找图片 颜色 等等一切图色函数所有坐标都相对此图片，如果不想受到影响，调用GetScreenDataBmp时应时整个窗口的大小.</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败 1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.AStarFindPath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">AStarFindPath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mapWidth</span><span class="p">,</span> <span class="n">mapHeight</span><span class="p">,</span> <span class="n">disable_points</span><span class="p">,</span> <span class="n">beginX</span><span class="p">,</span> <span class="n">beginY</span><span class="p">,</span> <span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>A星算法</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>mapWidth</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>mapHeight</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>disable_points</strong> (<code>str</code>) – 不可通行的坐标，以"|"分割，例如:"10,15|20,30"</p></li>
+            <li><p><strong>beginX</strong> (<code>int</code>) – 源坐标X</p></li>
+            <li><p><strong>beginY</strong> (<code>int</code>) – 源坐标Y</p></li>
+            <li><p><strong>endX</strong> (<code>int</code>) – 目的坐标X</p></li>
+            <li><p><strong>endY</strong> (<code>int</code>) – 目的坐标Y</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败 1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindStr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindStr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">string_</span><span class="p">,</span> <span class="n">color_format</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>在屏幕范围(x1,y1,x2,y2)内,查找string(可以是任意个字符串的组合),并返回符合color_format的坐标位置,相似度sim同Ocr接口描述.(多色,差色查找类似于Ocr接口,不再重述)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – :区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>string_</strong> (<code>str</code>) – 待查找的字符串,可以是字符串组合，比如"长安|洛阳|大雁塔",中间用"|"来分割字符串</p></li>
+            <li><p><strong>color_format</strong> (<code>str</code>) – 颜色格式串, 可以包含换行分隔符,语法是","后加分割字符串. 具体可以查看下面的示例 .注意，RGB和HSV格式都支持</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 双精度浮点数:相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>tuple</code> – (x1,y1,x2,y2,string_,color_format,sim,返回X坐标没找到返回-1,返回Y坐标没找到返回-1)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>示例:</p>
+<pre><code>op_ret = op.FindStr(0,0,2000,2000,"长安","9f2e3f-000000",1.0,intX,intY)
+If intX &gt;= 0 and intY &gt;= 0 Then
+     op.MoveTo intX,intY
+End If
+
+op_ret = op.FindStr(0,0,2000,2000,"长安|洛阳","9f2e3f-000000",1.0,intX,intY)
+If intX &gt;= 0 and intY &gt;= 0 Then
+     op.MoveTo intX,intY
+End If
+
+// 查找时,对多行文本进行换行,换行分隔符是"|". 语法是在","后增加换行字符串.任意字符串都可以.
+op_ret = op.FindStr(0,0,2000,2000,"长安|洛阳","9f2e3f-000000,|",1.0,intX,intY)
+If intX &gt;= 0 and intY &gt;= 0 Then
+     op.MoveTo intX,intY
+End If
+注: 此函数的原理是先Ocr识别，然后再查找。
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.FindStrEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">FindStrEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">string_</span><span class="p">,</span> <span class="n">color_format</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>在屏幕范围(x1,y1,x2,y2)内,查找string(可以是任意个字符串的组合),并返回符合color_format的坐标位置,相似度sim同Ocr接口描述.(多色,差色查找类似于Ocr接口,不再重述)</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – :区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>string_</strong> (<code>str</code>) – 待查找的字符串,可以是字符串组合，比如"长安|洛阳|大雁塔",中间用"|"来分割字符串</p></li>
+            <li><p><strong>color_format</strong> (<code>str</code>) – 颜色格式串, 可以包含换行分隔符,语法是","后加分割字符串. 具体可以查看下面的示例 .注意，RGB和HSV格式都支持</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 双精度浮点数:相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>返回所有找到的坐标集合,格式如下</code> – "id,x0,y0|id,x1,y1|......|id,xn,yn" 比如"0,100,20|2,30,40" 表示找到了两个,第一个,对应的是序号为0的字符串,坐标是(100,20),第二个是序号为2的字符串,坐标(30,40)</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>示例:</p>
+<pre><code>op_ret = op.FindStrEx(0,0,2000,2000,"长安|洛阳","9f2e3f-000000",1.0)
+If len(op_ret) &gt; 0 Then
+   ss = split(op_ret,"|")
+   index = 0
+   count = UBound(ss) + 1
+   Do While index &lt; count
+      TracePrint ss(index)
+      sss = split(ss(index),",")
+      id = int(sss(0))
+      x = int(sss(1))
+      y = int(sss(2))
+      op.MoveTo x,y
+      Delay 1000
+      index = index+1
+   Loop
+End If
+注: 此函数的原理是先Ocr识别，然后再查找。
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.Ocr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">Ocr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">color_format</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>识别屏幕范围(x1,y1,x2,y2)内符合color_format的字符串,并且相似度为sim,sim取值范围(0.1-1.0),这个值越大越精确,越大速度越快,越小速度越慢,请斟酌使用!</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>color_format</strong> (<code>str</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 双精度浮点数:相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回识别到的字符串</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>      <p>示例:</p>
+<pre><code>//RGB单色识别
+s = op.Ocr(0,0,2000,2000,"9f2e3f-000000",1.0)
+MessageBox s
+
+//RGB单色差色识别
+s = op.Ocr(0,0,2000,2000,"9f2e3f-030303",1.0)
+MessageBox s
+
+//RGB多色识别(最多支持10种,每种颜色用"|"分割)
+s = op.Ocr(0,0,2000,2000,"9f2e3f-030303|2d3f2f-000000|3f9e4d-100000",1.0)
+MessageBox s
+</code></pre>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.OcrEx" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">OcrEx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">color_format</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>识别屏幕范围(x1,y1,x2,y2)内符合color_format的字符串,并且相似度为sim,sim取值范围(0.1-1.0),这个值越大越精确,越大速度越快,越小速度越慢,请斟酌使用!这个函数可以返回识别到的字符串，以及每个字符的坐标.</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>color_format</strong> (<code>str</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 双精度浮点数:相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回识别到的字符串 格式如 "字符0$x0$y0|…|字符n$xn$yn"</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.SetDict" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">SetDict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>设置字库文件</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>index</strong> (<code>int</code>) – 字库的序号,取值为0-19,目前最多支持20个字库</p></li>
+            <li><p><strong>file</strong> (<code>str</code>) – 字库文件名</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败 1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.UseDict" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">UseDict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>表示使用哪个字库文件进行识别(index范围:0-9)设置之后，永久生效，除非再次设定</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>index</strong> (<code>int</code>) – 字库编号(0-9)</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>int</code> – 0代表失败 1代表成功</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.OcrAuto" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">OcrAuto</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>识别屏幕范围(x1,y1,x2,y2)内的字符串,自动二值化，而无需指定颜色,适用于字体颜色和背景相差较大的场合</p>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>x1</strong> (<code>int</code>) – 区域的左上X坐标</p></li>
+            <li><p><strong>y1</strong> (<code>int</code>) – 区域的左上Y坐标</p></li>
+            <li><p><strong>x2</strong> (<code>int</code>) – 区域的右下X坐标</p></li>
+            <li><p><strong>y2</strong> (<code>int</code>) – 区域的右下Y坐标</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回识别到的字符串</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.OcrFromFile" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">OcrFromFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">color_format</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>file_name</strong> (<code>str</code>) – 文件名</p></li>
+            <li><p><strong>color_format</strong> (<code>str</code>) – 颜色格式串</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回识别到的字符串</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 id="pyopdll.op.OP.OcrAutoFromFile" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">OcrAutoFromFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">sim</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li><p><strong>file_name</strong> (<code>str</code>) – 文件名</p></li>
+            <li><p><strong>sim</strong> (<code>float</code>) – 相似度,取值范围0.1-1.0</p></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+    <th class="field-name">Returns:</th>
+    <td class="field-body">
+        <ul class="first simple">
+          <li><p><code>str</code> – 返回识别到的字符串</p></li>
+        </ul>
+    </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.2.3
+Build Date UTC : 2021-10-25 14:07:58.008416+00:00
+-->

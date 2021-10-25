@@ -1,0 +1,30 @@
+site_name: pyopdll
+
+
+nav:
+    - '首页': index.md
+    - '窗口设置': 窗口设置.md
+    - '基本设置': 基本设置.md
+    - '后台设置': 后台设置.md
+    - '键盘鼠标': 键盘鼠标.md
+    - 'WinApi': WinApi.md
+    - '图色设置': 图色设置.md
+    - '常见算法': 常见算法.md
+    - '文字识别': 文字识别.md
+
+theme:
+#  name: "material"
+  name: "readthedocs"
+
+plugins:
+- search
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        rendering:
+          show_source: false
+        setup_commands:
+          - import sys
+          - sys.path.insert(0, "..")
+
